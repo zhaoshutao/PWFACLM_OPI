@@ -1,0 +1,1348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-05-25 11:31:00 by Administrator-->
+<display version="2.0.0">
+  <name>BL1_Device</name>
+  <width>900</width>
+  <height>620</height>
+  <background_color>
+    <color name="Button_Background" red="210" green="210" blue="210">
+    </color>
+  </background_color>
+  <widget type="rectangle" version="2.0.0">
+    <name>HeaderBar</name>
+    <width>900</width>
+    <height>60</height>
+    <line_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>PageTitle</name>
+    <text>PWFA BL1 Collimator - $(DEVICE)</text>
+    <width>900</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LedEStop</name>
+    <pv_name>$(P)E_STOP_led</pv_name>
+    <x>210</x>
+    <y>68</y>
+    <width>90</width>
+    <height>24</height>
+    <off_label>ESTOP</off_label>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <on_label>ESTOP!</on_label>
+    <line_color>
+      <color red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LedLocal</name>
+    <pv_name>$(P)Local_led</pv_name>
+    <x>10</x>
+    <y>68</y>
+    <width>90</width>
+    <height>24</height>
+    <off_label> LOCAL</off_label>
+    <off_color>
+      <color red="80" green="80" blue="80">
+      </color>
+    </off_color>
+    <on_label>LOCAL</on_label>
+    <on_color>
+      <color red="0" green="200" blue="0">
+      </color>
+    </on_color>
+    <line_color>
+      <color red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LedRemote</name>
+    <pv_name>$(P)Remote_led</pv_name>
+    <x>110</x>
+    <y>68</y>
+    <width>90</width>
+    <height>24</height>
+    <off_label> REMOTE</off_label>
+    <off_color>
+      <color red="80" green="80" blue="80">
+      </color>
+    </off_color>
+    <on_label>REMOTE</on_label>
+    <line_color>
+      <color red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LedError</name>
+    <pv_name>$(P)Error_led</pv_name>
+    <x>320</x>
+    <y>68</y>
+    <width>90</width>
+    <height>24</height>
+    <off_label>ERROR</off_label>
+    <off_color>
+      <color red="0" green="200" blue="0">
+      </color>
+    </off_color>
+    <on_label>ERROR</on_label>
+    <on_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <line_color>
+      <color red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>TextErrorId</name>
+    <pv_name>$(P)ErrorId</pv_name>
+    <x>430</x>
+    <y>73</y>
+    <width>40</width>
+    <height>22</height>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>TextErrorDesc</name>
+    <pv_name>$(P)ErrorDescription</pv_name>
+    <x>480</x>
+    <y>73</y>
+    <width>350</width>
+    <height>22</height>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>MainTabs</name>
+    <tabs>
+      <tab>
+        <name>Motion</name>
+        <children>
+          <widget type="rectangle" version="2.0.0">
+            <name>BottomBar</name>
+            <x>8</x>
+            <y>430</y>
+            <width>880</width>
+            <height>60</height>
+            <line_color>
+              <color red="102" green="128" blue="230">
+              </color>
+            </line_color>
+            <background_color>
+              <color red="102" green="128" blue="230">
+              </color>
+            </background_color>
+          </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>BtnMain</name>
+            <actions>
+              <action type="open_display">
+                <file>BL1_Main.bob</file>
+                <target>replace</target>
+                <description>MAIN</description>
+              </action>
+            </actions>
+            <text>MAIN</text>
+            <x>648</x>
+            <y>440</y>
+            <width>140</width>
+            <height>45</height>
+            <font>
+              <font family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <background_color>
+              <color name="Background" red="255" green="255" blue="255">
+              </color>
+            </background_color>
+            <tooltip>$(actions)</tooltip>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>GrpAxis1</name>
+            <x>8</x>
+            <y>10</y>
+            <width>431</width>
+            <height>410</height>
+            <transparent>true</transparent>
+            <widget type="label" version="2.0.0">
+              <name>LblA1CurrVel</name>
+              <text>CurrentVelocity</text>
+              <x>2</x>
+              <y>2</y>
+              <width>140</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>TextA1CurrVel</name>
+              <pv_name>$(P)$(A1NAME)_CurrentVelocity</pv_name>
+              <y>26</y>
+              <width>110</width>
+              <height>22</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1CurrPos</name>
+              <text>CurrentPosition</text>
+              <x>125</x>
+              <y>2</y>
+              <width>140</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>TextA1CurrPos</name>
+              <pv_name>$(P)$(A1NAME)_CurrentPosition</pv_name>
+              <x>125</x>
+              <y>26</y>
+              <width>110</width>
+              <height>22</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1TargVel</name>
+              <text>TargetVelocity</text>
+              <y>55</y>
+              <width>140</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1TargVel</name>
+              <pv_name>$(P)targetVelocity$(A1NAME)</pv_name>
+              <y>75</y>
+              <width>110</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <limits_from_pv>false</limits_from_pv>
+              <increment>0.1</increment>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1TargPos</name>
+              <text>TargetPosition</text>
+              <x>125</x>
+              <y>55</y>
+              <width>140</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1TargPos</name>
+              <pv_name>$(P)targetPosition$(A1NAME)</pv_name>
+              <x>125</x>
+              <y>75</y>
+              <width>110</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>200.0</maximum>
+              <limits_from_pv>false</limits_from_pv>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1Move</name>
+              <pv_name>$(P)btn_Move_$(A1NAME)</pv_name>
+              <x>22</x>
+              <y>112</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Move</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>Move</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1Stop</name>
+              <pv_name>$(P)btn_Stop_$(A1NAME)</pv_name>
+              <x>152</x>
+              <y>112</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Stop</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>Stop</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1JogF</name>
+              <pv_name>$(P)btn_JogForward_$(A1NAME)</pv_name>
+              <x>22</x>
+              <y>167</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG+</off_label>
+              <off_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </off_color>
+              <on_label>JOG+</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1JogB</name>
+              <pv_name>$(P)btn_JogBackward_$(A1NAME)</pv_name>
+              <x>152</x>
+              <y>167</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG-</off_label>
+              <off_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </off_color>
+              <on_label>JOG-</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1JogStep</name>
+              <text>JogStep</text>
+              <x>5</x>
+              <y>287</y>
+              <width>70</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="12.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1JogStep</name>
+              <pv_name>$(P)increaseJogPosition$(A1NAME)</pv_name>
+              <x>2</x>
+              <y>308</y>
+              <width>110</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>10.0</maximum>
+              <limits_from_pv>false</limits_from_pv>
+              <increment>0.05</increment>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1Reset</name>
+              <pv_name>$(P)btn_Reset_$(A1NAME)</pv_name>
+              <x>22</x>
+              <y>222</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>RESET</off_label>
+              <off_color>
+                <color red="153" green="179" blue="255">
+                </color>
+              </off_color>
+              <on_label>RESET</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1SetPos</name>
+              <pv_name>$(P)btn_SetPosition_$(A1NAME)</pv_name>
+              <x>152</x>
+              <y>222</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>SetPos</off_label>
+              <off_color>
+                <color red="255" green="200" blue="0">
+                </color>
+              </off_color>
+              <on_label>SetPos</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1SetPosVal</name>
+              <text>SetPosVal</text>
+              <x>122</x>
+              <y>287</y>
+              <width>70</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="12.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1SetPosVal</name>
+              <pv_name>$(P)PositionSetValue_$(A1NAME)</pv_name>
+              <x>122</x>
+              <y>307</y>
+              <width>110</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>200.0</maximum>
+              <limits_from_pv>false</limits_from_pv>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedA1Moving</name>
+              <pv_name>$(P)$(A1NAME)_moving</pv_name>
+              <x>292</x>
+              <y>102</y>
+              <width>93</width>
+              <height>24</height>
+              <off_label>NOTMOVING</off_label>
+              <on_label>MOVING</on_label>
+              <on_color>
+                <color red="0" green="200" blue="0">
+                </color>
+              </on_color>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedA1Error</name>
+              <pv_name>$(P)$(A1NAME)_error</pv_name>
+              <x>292</x>
+              <y>142</y>
+              <width>93</width>
+              <height>24</height>
+              <off_label> ERROR</off_label>
+              <off_color>
+                <color name="On" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>ERROR</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedA1FwdLimit</name>
+              <pv_name>$(P)foreward_limit_$(A1NAME)</pv_name>
+              <x>292</x>
+              <y>182</y>
+              <width>93</width>
+              <height>24</height>
+              <off_label> FWD LIM</off_label>
+              <off_color>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>FWD LIM</on_label>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedA1BwdLimit</name>
+              <pv_name>$(P)backward_limit_$(A1NAME)</pv_name>
+              <x>292</x>
+              <y>222</y>
+              <width>93</width>
+              <height>24</height>
+              <off_label> BWD LIM</off_label>
+              <off_color>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>BWD LIM</on_label>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1LVDT</name>
+              <text>LVDT Val</text>
+              <x>268</x>
+              <y>2</y>
+              <width>70</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="12.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>TextA1LVDT</name>
+              <pv_name>$(P)LVDT$(A1SHORT)_PV</pv_name>
+              <x>262</x>
+              <y>26</y>
+              <height>22</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>GrpAxis2</name>
+            <x>438</x>
+            <y>10</y>
+            <width>431</width>
+            <height>410</height>
+            <transparent>true</transparent>
+            <widget type="label" version="2.0.0">
+              <name>LblA1CurrVel_1</name>
+              <text>CurrentVelocity</text>
+              <y>2</y>
+              <width>140</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>TextA1CurrVel_1</name>
+              <pv_name>$(P)$(A2NAME)_CurrentVelocity</pv_name>
+              <y>26</y>
+              <width>110</width>
+              <height>22</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1CurrPos_1</name>
+              <text>CurrentPosition</text>
+              <x>125</x>
+              <y>2</y>
+              <width>140</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>TextA1CurrPos_1</name>
+              <pv_name>$(P)$(A2NAME)_CurrentPosition</pv_name>
+              <x>125</x>
+              <y>26</y>
+              <width>110</width>
+              <height>22</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1TargVel_1</name>
+              <text>TargetVelocity</text>
+              <y>55</y>
+              <width>140</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1TargVel_1</name>
+              <pv_name>$(P)targetVelocity$(A2NAME)</pv_name>
+              <y>75</y>
+              <width>110</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <limits_from_pv>false</limits_from_pv>
+              <increment>0.1</increment>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1TargPos_1</name>
+              <text>TargetPosition</text>
+              <x>125</x>
+              <y>55</y>
+              <width>140</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1TargPos_1</name>
+              <pv_name>$(P)targetPosition$(A2NAME)</pv_name>
+              <x>125</x>
+              <y>75</y>
+              <width>110</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>200.0</maximum>
+              <limits_from_pv>false</limits_from_pv>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1Move_1</name>
+              <pv_name>$(P)btn_Move_$(A2NAME)</pv_name>
+              <x>22</x>
+              <y>112</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Move</off_label>
+              <off_color>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>Move</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1Stop_1</name>
+              <pv_name>$(P)btn_Stop_$(A2NAME)</pv_name>
+              <x>152</x>
+              <y>112</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>Stop</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>Stop</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1JogF_1</name>
+              <pv_name>$(P)btn_JogForward_$(A2NAME)</pv_name>
+              <x>22</x>
+              <y>167</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG+</off_label>
+              <off_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </off_color>
+              <on_label>JOG+</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1JogB_1</name>
+              <pv_name>$(P)btn_JogBackward_$(A2NAME)</pv_name>
+              <x>152</x>
+              <y>167</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>JOG-</off_label>
+              <off_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </off_color>
+              <on_label>JOG-</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1JogStep_1</name>
+              <text>JogStep</text>
+              <x>5</x>
+              <y>287</y>
+              <width>70</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="12.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1JogStep_1</name>
+              <pv_name>$(P)increaseJogPosition$(A2NAME)</pv_name>
+              <x>2</x>
+              <y>308</y>
+              <width>110</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>10.0</maximum>
+              <limits_from_pv>false</limits_from_pv>
+              <increment>0.05</increment>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1Reset_1</name>
+              <pv_name>$(P)btn_Reset_$(A2NAME)</pv_name>
+              <x>22</x>
+              <y>222</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>RESET</off_label>
+              <off_color>
+                <color red="153" green="179" blue="255">
+                </color>
+              </off_color>
+              <on_label>RESET</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1SetPos_1</name>
+              <pv_name>$(P)btn_SetPosition_$(A2NAME)</pv_name>
+              <x>152</x>
+              <y>222</y>
+              <width>90</width>
+              <height>40</height>
+              <off_label>SetPos</off_label>
+              <off_color>
+                <color red="255" green="200" blue="0">
+                </color>
+              </off_color>
+              <on_label>SetPos</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1SetPosVal_1</name>
+              <text>SetPosVal</text>
+              <x>122</x>
+              <y>287</y>
+              <width>70</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="12.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1SetPosVal_1</name>
+              <pv_name>$(P)PositionSetValue_$(A2NAME)</pv_name>
+              <x>122</x>
+              <y>307</y>
+              <width>110</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <maximum>200.0</maximum>
+              <limits_from_pv>false</limits_from_pv>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedA1Moving_1</name>
+              <pv_name>$(P)$(A2NAME)_moving</pv_name>
+              <x>292</x>
+              <y>102</y>
+              <width>93</width>
+              <height>24</height>
+              <off_label>NOTMOVING</off_label>
+              <on_label>MOVING</on_label>
+              <on_color>
+                <color red="0" green="200" blue="0">
+                </color>
+              </on_color>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedA1Error_1</name>
+              <pv_name>$(P)$(A2NAME)_error</pv_name>
+              <x>292</x>
+              <y>142</y>
+              <width>93</width>
+              <height>24</height>
+              <off_label> ERROR</off_label>
+              <off_color>
+                <color name="On" red="0" green="255" blue="0">
+                </color>
+              </off_color>
+              <on_label>ERROR</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedA1FwdLimit_1</name>
+              <pv_name>$(P)foreward_limit_$(A2NAME)</pv_name>
+              <x>292</x>
+              <y>182</y>
+              <width>93</width>
+              <height>24</height>
+              <off_label> FWD LIM</off_label>
+              <off_color>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>FWD LIM</on_label>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedA1BwdLimit_1</name>
+              <pv_name>$(P)backward_limit_$(A2NAME)</pv_name>
+              <x>292</x>
+              <y>222</y>
+              <width>93</width>
+              <height>24</height>
+              <off_label> BWD LIM</off_label>
+              <off_color>
+                <color name="MAJOR" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>BWD LIM</on_label>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1LVDT_1</name>
+              <text>LVDT Val</text>
+              <x>268</x>
+              <y>2</y>
+              <width>70</width>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="12.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>TextA1LVDT_1</name>
+              <pv_name>$(P)LVDT$(A2SHORT)_PV</pv_name>
+              <x>262</x>
+              <y>26</y>
+              <height>22</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+          </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>BtnRestartTC</name>
+            <actions>
+              <action type="open_file">
+                <file>restart_all.bat</file>
+                <description>Open File</description>
+              </action>
+            </actions>
+            <text>RestartTC</text>
+            <x>20</x>
+            <y>440</y>
+            <width>120</width>
+            <height>40</height>
+            <tooltip>$(actions)</tooltip>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Config</name>
+        <children>
+          <widget type="label" version="2.0.0">
+            <name>LblCfgTitle</name>
+            <text>Axis Position Limits &amp; LVDT Thresholds</text>
+            <x>20</x>
+            <y>20</y>
+            <width>600</width>
+            <height>30</height>
+            <font>
+              <font family="Liberation Sans" style="BOLD" size="16.0">
+              </font>
+            </font>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>GrpCfgA1</name>
+            <x>20</x>
+            <y>60</y>
+            <width>350</width>
+            <height>230</height>
+            <transparent>true</transparent>
+            <widget type="label" version="2.0.0">
+              <name>LblCfgA1</name>
+              <text>$(A1NAME) Configuration</text>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1MinPos</name>
+              <text>Min Position</text>
+              <y>30</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1MinPos</name>
+              <pv_name>$(P)$(A1NAME)_minPosition</pv_name>
+              <x>110</x>
+              <y>28</y>
+              <width>120</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1MaxPos</name>
+              <text>Max Position</text>
+              <y>60</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1MaxPos</name>
+              <pv_name>$(P)$(A1NAME)_maxPosition</pv_name>
+              <x>110</x>
+              <y>58</y>
+              <width>120</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA1LvdThr</name>
+              <text>LVDT Threshold</text>
+              <y>90</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA1LvdThr</name>
+              <pv_name>$(P)LVDT$(A1SHORT)_Threshold</pv_name>
+              <x>110</x>
+              <y>88</y>
+              <width>120</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1LvdOn</name>
+              <pv_name>$(P)LVDT$(A1SHORT)_FunctionOn</pv_name>
+              <x>10</x>
+              <y>132</y>
+              <height>35</height>
+              <off_label>LVDT ON</off_label>
+              <off_color>
+                <color red="100" green="100" blue="255">
+                </color>
+              </off_color>
+              <on_label>LVDT ON</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA1LvdRel</name>
+              <pv_name>$(P)LVDT$(A1SHORT)_ManualReleaseAlarm</pv_name>
+              <x>130</x>
+              <y>132</y>
+              <height>35</height>
+              <off_label>REL ALM</off_label>
+              <off_color>
+                <color red="255" green="200" blue="0">
+                </color>
+              </off_color>
+              <on_label>REL ALM</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>GrpCfgA2</name>
+            <x>400</x>
+            <y>60</y>
+            <width>350</width>
+            <height>230</height>
+            <transparent>true</transparent>
+            <widget type="label" version="2.0.0">
+              <name>LblCfgA2</name>
+              <text>$(A2NAME) Configuration</text>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA2MinPos</name>
+              <text>Min Position</text>
+              <y>30</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA2MinPos</name>
+              <pv_name>$(P)$(A2NAME)_minPosition</pv_name>
+              <x>110</x>
+              <y>28</y>
+              <width>120</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA2MaxPos</name>
+              <text>Max Position</text>
+              <y>60</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA2MaxPos</name>
+              <pv_name>$(P)$(A2NAME)_maxPosition</pv_name>
+              <x>110</x>
+              <y>58</y>
+              <width>120</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblA2LvdThr</name>
+              <text>LVDT Threshold</text>
+              <y>90</y>
+            </widget>
+            <widget type="spinner" version="2.0.0">
+              <name>SpinA2LvdThr</name>
+              <pv_name>$(P)LVDT$(A2SHORT)_Threshold</pv_name>
+              <x>110</x>
+              <y>88</y>
+              <width>120</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA2LvdOn</name>
+              <pv_name>$(P)LVDT$(A2SHORT)_FunctionOn</pv_name>
+              <x>10</x>
+              <y>132</y>
+              <width>110</width>
+              <height>35</height>
+              <off_label>LVDT ON</off_label>
+              <off_color>
+                <color red="100" green="100" blue="255">
+                </color>
+              </off_color>
+              <on_label>LVDT ON</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+            <widget type="bool_button" version="2.0.0">
+              <name>BtnA2LvdRel</name>
+              <pv_name>$(P)LVDT$(A2SHORT)_ManualReleaseAlarm</pv_name>
+              <x>150</x>
+              <y>132</y>
+              <width>110</width>
+              <height>35</height>
+              <off_label>REL ALM</off_label>
+              <off_color>
+                <color red="255" green="200" blue="0">
+                </color>
+              </off_color>
+              <on_label>REL ALM</on_label>
+              <on_color>
+                <color name="Write_Background" red="128" green="255" blue="255">
+                </color>
+              </on_color>
+              <show_led>false</show_led>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+              <mode>1</mode>
+            </widget>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Expert</name>
+        <children>
+          <widget type="label" version="2.0.0">
+            <name>LblExpertTitle</name>
+            <text>Diagnostics &amp; System Info</text>
+            <x>20</x>
+            <y>20</y>
+            <width>400</width>
+            <height>30</height>
+            <font>
+              <font family="Liberation Sans" style="BOLD" size="16.0">
+              </font>
+            </font>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>GrpConn</name>
+            <x>20</x>
+            <y>60</y>
+            <width>700</width>
+            <height>60</height>
+            <transparent>true</transparent>
+            <widget type="label" version="2.0.0">
+              <name>LblConnInfo</name>
+              <text>Modbus TCP: 192.168.201.137:502  |  PLC Type: TwinCAT  |  8 Axes</text>
+              <y>10</y>
+              <width>700</width>
+              <height>30</height>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>GrpStatusDetail</name>
+            <x>20</x>
+            <y>130</y>
+            <width>350</width>
+            <transparent>true</transparent>
+            <widget type="label" version="2.0.0">
+              <name>LblStatusTitle</name>
+              <text>Global Status Bits</text>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedRemote_1</name>
+              <pv_name>$(P)Remote_led</pv_name>
+              <x>30</x>
+              <y>52</y>
+              <width>90</width>
+              <height>24</height>
+              <off_label> REMOTE</off_label>
+              <off_color>
+                <color red="80" green="80" blue="80">
+                </color>
+              </off_color>
+              <on_label>REMOTE</on_label>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedEStop_1</name>
+              <pv_name>$(P)E_STOP_led</pv_name>
+              <x>30</x>
+              <y>82</y>
+              <width>90</width>
+              <height>24</height>
+              <off_label>ESTOP</off_label>
+              <off_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </off_color>
+              <on_label>ESTOP!</on_label>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="led" version="2.0.0">
+              <name>LedError_1</name>
+              <pv_name>$(P)Error_led</pv_name>
+              <x>30</x>
+              <y>112</y>
+              <width>90</width>
+              <height>24</height>
+              <off_label>ERROR</off_label>
+              <off_color>
+                <color red="0" green="200" blue="0">
+                </color>
+              </off_color>
+              <on_label>ERROR</on_label>
+              <on_color>
+                <color name="STOP" red="255" green="0" blue="0">
+                </color>
+              </on_color>
+              <line_color>
+                <color red="210" green="210" blue="210">
+                </color>
+              </line_color>
+              <square>true</square>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+          </widget>
+          <widget type="group" version="2.0.0">
+            <name>GrpErrorInfo</name>
+            <x>390</x>
+            <y>130</y>
+            <width>398</width>
+            <transparent>true</transparent>
+            <widget type="label" version="2.0.0">
+              <name>LblErrTitle</name>
+              <text>Error Information</text>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblErrId</name>
+              <text>Error ID:</text>
+              <y>40</y>
+              <width>80</width>
+              <height>24</height>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>TextErrIdExp</name>
+              <pv_name>$(P)ErrorId</pv_name>
+              <x>90</x>
+              <y>40</y>
+              <width>60</width>
+              <height>24</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+            <widget type="label" version="2.0.0">
+              <name>LblErrDesc</name>
+              <text>Description:</text>
+              <y>80</y>
+              <width>80</width>
+              <height>24</height>
+              <font>
+                <font family="Liberation Sans" style="BOLD" size="13.0">
+                </font>
+              </font>
+            </widget>
+            <widget type="textupdate" version="2.0.0">
+              <name>TextErrDescExp</name>
+              <pv_name>$(P)ErrorDescription</pv_name>
+              <x>90</x>
+              <y>80</y>
+              <width>250</width>
+              <height>80</height>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
+            </widget>
+          </widget>
+          <widget type="led" version="2.0.0">
+            <name>LedLocal_1</name>
+            <pv_name>$(P)Local_led</pv_name>
+            <x>68</x>
+            <y>170</y>
+            <width>90</width>
+            <height>24</height>
+            <off_label> LOCAL</off_label>
+            <off_color>
+              <color red="80" green="80" blue="80">
+              </color>
+            </off_color>
+            <on_label>LOCAL</on_label>
+            <on_color>
+              <color red="0" green="200" blue="0">
+              </color>
+            </on_color>
+            <line_color>
+              <color red="210" green="210" blue="210">
+              </color>
+            </line_color>
+            <square>true</square>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <y>92</y>
+    <width>900</width>
+    <height>528</height>
+  </widget>
+</display>

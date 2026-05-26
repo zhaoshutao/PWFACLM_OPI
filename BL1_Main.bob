@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2026-05-25 10:27:29 by Administrator-->
+<display version="2.0.0">
+  <name>BL1_Main</name>
+  <height>540</height>
+  <background_color>
+    <color name="Button_Background" red="210" green="210" blue="210">
+    </color>
+  </background_color>
+  <widget type="rectangle" version="2.0.0">
+    <name>TopBar</name>
+    <width>800</width>
+    <height>60</height>
+    <line_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Title</name>
+    <text>PWFA BL1 Collimator Control System</text>
+    <width>800</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="24.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_ForeGround" red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="rectangle" version="2.0.0">
+    <name>BottomBar</name>
+    <y>520</y>
+    <width>800</width>
+    <line_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </line_color>
+    <background_color>
+      <color red="102" green="128" blue="230">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Goto_V01</name>
+    <actions>
+      <action type="open_display">
+        <file>BL1_Device.bob</file>
+        <macros>
+          <A1NAME>TopAxis</A1NAME>
+          <A1SHORT>Top</A1SHORT>
+          <A2NAME>BottomAxis</A2NAME>
+          <A2SHORT>Bottom</A2SHORT>
+          <DEVICE>BL1COLV01</DEVICE>
+          <P>PWFA:BL1:COL:BL1COLV01:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BL1COLV01 (Top/Bottom)</text>
+    <x>80</x>
+    <y>140</y>
+    <width>300</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Goto_H01</name>
+    <actions>
+      <action type="open_display">
+        <file>BL1_Device.bob</file>
+        <macros>
+          <A1NAME>LeftAxis</A1NAME>
+          <A1SHORT>Left</A1SHORT>
+          <A2NAME>RightAxis</A2NAME>
+          <A2SHORT>Right</A2SHORT>
+          <DEVICE>BL1COLH01</DEVICE>
+          <P>PWFA:BL1:COL:BL1COLH01:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BL1COLH01 (Left/Right)</text>
+    <x>420</x>
+    <y>140</y>
+    <width>300</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Goto_V02</name>
+    <actions>
+      <action type="open_display">
+        <file>BL1_Device.bob</file>
+        <macros>
+          <A1NAME>TopAxis</A1NAME>
+          <A1SHORT>Top</A1SHORT>
+          <A2NAME>BottomAxis</A2NAME>
+          <A2SHORT>Bottom</A2SHORT>
+          <DEVICE>BL1COLV02</DEVICE>
+          <P>PWFA:BL1:COL:BL1COLV02:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BL1COLV02 (Top/Bottom)</text>
+    <x>80</x>
+    <y>240</y>
+    <width>300</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Goto_H02</name>
+    <actions>
+      <action type="open_display">
+        <file>BL1_Device.bob</file>
+        <macros>
+          <A1NAME>LeftAxis</A1NAME>
+          <A1SHORT>Left</A1SHORT>
+          <A2NAME>RightAxis</A2NAME>
+          <A2SHORT>Right</A2SHORT>
+          <DEVICE>BL1COLH02</DEVICE>
+          <P>PWFA:BL1:COL:BL1COLH02:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BL1COLH02 (Left/Right)</text>
+    <x>420</x>
+    <y>240</y>
+    <width>300</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Info</name>
+    <text>PLC: 192.168.201.137:502 | 8-Axis TwinCAT System</text>
+    <y>380</y>
+    <width>800</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="100" green="100" blue="100">
+      </color>
+    </foreground_color>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+</display>
