@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-05-25 11:31:00 by Administrator-->
+<!--Saved on 2026-06-04 16:39:21 by Administrator-->
 <display version="2.0.0">
   <name>BL1_Device</name>
   <width>900</width>
@@ -110,7 +110,7 @@
     <height>24</height>
     <off_label>ERROR</off_label>
     <off_color>
-      <color red="0" green="200" blue="0">
+      <color name="On" red="0" green="255" blue="0">
       </color>
     </off_color>
     <on_label>ERROR</on_label>
@@ -274,6 +274,7 @@
               <width>110</width>
               <height>24</height>
               <border_alarm_sensitive>false</border_alarm_sensitive>
+              <minimum>-200.0</minimum>
               <maximum>200.0</maximum>
               <limits_from_pv>false</limits_from_pv>
             </widget>
@@ -457,10 +458,6 @@
               <height>24</height>
               <off_label>NOTMOVING</off_label>
               <on_label>MOVING</on_label>
-              <on_color>
-                <color red="0" green="200" blue="0">
-                </color>
-              </on_color>
               <line_color>
                 <color red="210" green="210" blue="210">
                 </color>
@@ -636,6 +633,7 @@
               <width>110</width>
               <height>24</height>
               <border_alarm_sensitive>false</border_alarm_sensitive>
+              <minimum>-200.0</minimum>
               <maximum>200.0</maximum>
               <limits_from_pv>false</limits_from_pv>
             </widget>
@@ -819,10 +817,6 @@
               <height>24</height>
               <off_label>NOTMOVING</off_label>
               <on_label>MOVING</on_label>
-              <on_color>
-                <color red="0" green="200" blue="0">
-                </color>
-              </on_color>
               <line_color>
                 <color red="210" green="210" blue="210">
                 </color>

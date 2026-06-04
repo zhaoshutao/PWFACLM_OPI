@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-05-25 10:27:29 by Administrator-->
+<!--Saved on 2026-06-04 16:39:35 by Administrator-->
 <display version="2.0.0">
   <name>BL1_Main</name>
   <height>540</height>
@@ -22,7 +22,7 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Title</name>
-    <text>PWFA BL1 Collimator Control System</text>
+    <text>PWFA Collimator Control System</text>
     <width>800</width>
     <height>60</height>
     <font>
@@ -193,10 +193,82 @@
     </background_color>
     <tooltip>$(actions)</tooltip>
   </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Goto_BL2COL1</name>
+    <actions>
+      <action type="open_display">
+        <file>BL1_Device.bob</file>
+        <macros>
+          <A1NAME>Axis</A1NAME>
+          <A1SHORT>A</A1SHORT>
+          <A2NAME>Unused</A2NAME>
+          <A2SHORT>U</A2SHORT>
+          <DEVICE>BL2COL1</DEVICE>
+          <P>PWFA:BL2:COL:BL2COL1:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BL2COL1</text>
+    <x>80</x>
+    <y>340</y>
+    <width>300</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Goto_BL2COL2</name>
+    <actions>
+      <action type="open_display">
+        <file>BL1_Device.bob</file>
+        <macros>
+          <A1NAME>Axis</A1NAME>
+          <A1SHORT>A</A1SHORT>
+          <A2NAME>Unused</A2NAME>
+          <A2SHORT>U</A2SHORT>
+          <DEVICE>BL2COL2</DEVICE>
+          <P>PWFA:BL2:COL:BL2COL2:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>BL2COL2</text>
+    <x>420</x>
+    <y>340</y>
+    <width>300</width>
+    <height>60</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
   <widget type="label" version="2.0.0">
     <name>Info</name>
-    <text>PLC: 192.168.201.137:502 | 8-Axis TwinCAT System</text>
-    <y>380</y>
+    <text>PLC: 192.168.201.137:502 | 10-Axis TwinCAT System</text>
+    <y>420</y>
     <width>800</width>
     <height>40</height>
     <foreground_color>
