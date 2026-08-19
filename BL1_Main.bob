@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-06-04 16:39:35 by Administrator-->
+<!--Saved on 2026-08-19 10:44:28 by Administrator-->
 <display version="2.0.0">
   <name>BL1_Main</name>
   <height>540</height>
@@ -9,7 +9,7 @@
   </background_color>
   <widget type="rectangle" version="2.0.0">
     <name>TopBar</name>
-    <width>800</width>
+    <width>1840</width>
     <height>60</height>
     <line_color>
       <color red="102" green="128" blue="230">
@@ -23,10 +23,11 @@
   <widget type="label" version="2.0.0">
     <name>Title</name>
     <text>PWFA Collimator Control System</text>
-    <width>800</width>
-    <height>60</height>
+    <x>110</x>
+    <width>1720</width>
+    <height>70</height>
     <font>
-      <font family="Liberation Sans" style="BOLD" size="24.0">
+      <font family="Liberation Sans" style="BOLD" size="32.0">
       </font>
     </font>
     <foreground_color>
@@ -38,8 +39,8 @@
   </widget>
   <widget type="rectangle" version="2.0.0">
     <name>BottomBar</name>
-    <y>520</y>
-    <width>800</width>
+    <y>800</y>
+    <width>1820</width>
     <line_color>
       <color red="102" green="128" blue="230">
       </color>
@@ -66,11 +67,11 @@
         <description>Open Display</description>
       </action>
     </actions>
-    <text>BL1COLV01 (Top/Bottom)</text>
-    <x>80</x>
-    <y>140</y>
-    <width>300</width>
-    <height>60</height>
+    <text>BL1COLV01</text>
+    <x>7</x>
+    <y>117</y>
+    <width>120</width>
+    <height>79</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="16.0">
       </font>
@@ -102,11 +103,11 @@
         <description>Open Display</description>
       </action>
     </actions>
-    <text>BL1COLH01 (Left/Right)</text>
-    <x>420</x>
-    <y>140</y>
-    <width>300</width>
-    <height>60</height>
+    <text>BL1COLH01</text>
+    <x>7</x>
+    <y>259</y>
+    <width>120</width>
+    <height>79</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="16.0">
       </font>
@@ -138,10 +139,10 @@
         <description>Open Display</description>
       </action>
     </actions>
-    <text>BL1COLV02 (Top/Bottom)</text>
-    <x>80</x>
-    <y>240</y>
-    <width>300</width>
+    <text>BL1COLV02</text>
+    <x>7</x>
+    <y>390</y>
+    <width>120</width>
     <height>60</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="16.0">
@@ -174,10 +175,10 @@
         <description>Open Display</description>
       </action>
     </actions>
-    <text>BL1COLH02 (Left/Right)</text>
-    <x>420</x>
-    <y>240</y>
-    <width>300</width>
+    <text>BL1COLH02</text>
+    <x>7</x>
+    <y>464</y>
+    <width>120</width>
     <height>60</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="16.0">
@@ -211,9 +212,9 @@
       </action>
     </actions>
     <text>BL2COL1</text>
-    <x>80</x>
-    <y>340</y>
-    <width>300</width>
+    <x>7</x>
+    <y>544</y>
+    <width>120</width>
     <height>60</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="16.0">
@@ -247,9 +248,9 @@
       </action>
     </actions>
     <text>BL2COL2</text>
-    <x>420</x>
-    <y>340</y>
-    <width>300</width>
+    <x>7</x>
+    <y>620</y>
+    <width>120</width>
     <height>60</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="16.0">
@@ -266,15 +267,1277 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Info</name>
-    <text>PLC: 192.168.201.137:502 | 10-Axis TwinCAT System</text>
-    <y>420</y>
-    <width>800</width>
-    <height>40</height>
-    <foreground_color>
-      <color red="100" green="100" blue="100">
-      </color>
-    </foreground_color>
-    <horizontal_alignment>1</horizontal_alignment>
+    <name>LblA1CurrVel</name>
+    <text>CurrentVelocity</text>
+    <x>330</x>
+    <y>80</y>
+    <width>140</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>LblA1CurrPos</name>
+    <text>CurrentPosition</text>
+    <x>453</x>
+    <y>80</y>
+    <width>140</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>LblA1LVDT</name>
+    <text>LVDT Val</text>
+    <x>589</x>
+    <y>80</y>
+    <width>70</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>LblA1TargVel</name>
+    <text>TargetVelocity</text>
+    <x>703</x>
+    <y>80</y>
+    <width>140</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>LblA1TargPos</name>
+    <text>TargetPosition</text>
+    <x>833</x>
+    <y>80</y>
+    <width>140</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>LblA1MinPos</name>
+    <text>Min Position</text>
+    <x>1477</x>
+    <y>80</y>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>LblA1MaxPos</name>
+    <text>Max Position</text>
+    <x>1596</x>
+    <y>80</y>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>140</x>
+    <y>100</y>
+    <width>1680</width>
+    <height>51</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Top</text>
+      <y>17</y>
+      <width>37</width>
+      <height>22</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="20.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Move_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:btn_Power_TopAxis</pv_name>
+      <x>77</x>
+      <y>14</y>
+      <width>90</width>
+      <off_label>Power</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>Power</on_label>
+      <on_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1CurrVel</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:TopAxis_CurrentVelocity</pv_name>
+      <x>192</x>
+      <y>19</y>
+      <width>110</width>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1CurrPos</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:TopAxis_CurrentPosition</pv_name>
+      <x>317</x>
+      <y>19</y>
+      <width>110</width>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1LVDT</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:LVDTTop_PV</pv_name>
+      <x>447</x>
+      <y>19</y>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1TargVel</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:targetVelocityTopAxis</pv_name>
+      <x>567</x>
+      <y>19</y>
+      <width>110</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <maximum>0.5</maximum>
+      <limits_from_pv>false</limits_from_pv>
+      <increment>0.1</increment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1TargPos</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:targetPositionTopAxis</pv_name>
+      <x>697</x>
+      <y>19</y>
+      <width>110</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <minimum>-200.0</minimum>
+      <maximum>200.0</maximum>
+      <limits_from_pv>false</limits_from_pv>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Move_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:btn_Move_TopAxis</pv_name>
+      <x>827</x>
+      <y>9</y>
+      <width>90</width>
+      <height>40</height>
+      <off_label>Move</off_label>
+      <off_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>Move</on_label>
+      <on_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Stop</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:btn_Stop_TopAxis</pv_name>
+      <x>927</x>
+      <y>9</y>
+      <width>90</width>
+      <height>40</height>
+      <off_label>Stop</off_label>
+      <off_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>Stop</on_label>
+      <on_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:TopAxis_powerStatus</pv_name>
+      <x>1040</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label>PowerStatus</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>PowerStatus</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1FwdLimit</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:foreward_limit_TopAxis</pv_name>
+      <x>1040</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label> FWD LIM</off_label>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>FWD LIM</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1BwdLimit</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:backward_limit_TopAxis</pv_name>
+      <x>1133</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label> BWD LIM</off_label>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>BWD LIM</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1MinPos</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:TopAxis_minPosition</pv_name>
+      <x>1330</x>
+      <y>19</y>
+      <width>120</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1MaxPos</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:TopAxis_maxPosition</pv_name>
+      <x>1460</x>
+      <y>19</y>
+      <width>120</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:TopAxis_moving</pv_name>
+      <x>1133</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label>NOTMOVING</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>MOVING</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Stop_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:btn_EStop_TopAxis</pv_name>
+      <x>1600</x>
+      <width>80</width>
+      <height>50</height>
+      <off_label>ESTOP</off_label>
+      <off_color>
+        <color red="220" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>ESTOP</on_label>
+      <on_color>
+        <color red="220" green="0" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Error</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:TopAxis_error</pv_name>
+      <x>1226</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label> ERROR</off_label>
+      <off_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>ERROR</on_label>
+      <on_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:TopAxis_ESTOP_status</pv_name>
+      <x>1226</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label>EStopStatus</off_label>
+      <off_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>EStopStatus</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_2</name>
+    <x>140</x>
+    <y>160</y>
+    <width>1680</width>
+    <height>51</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Bottom</text>
+      <y>17</y>
+      <width>70</width>
+      <height>22</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="20.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Move_6</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:btn_Power_BottomAxis</pv_name>
+      <x>77</x>
+      <y>14</y>
+      <width>90</width>
+      <off_label>Power</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>Power</on_label>
+      <on_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1CurrVel_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:BottomAxis_CurrentVelocity</pv_name>
+      <x>192</x>
+      <y>19</y>
+      <width>110</width>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1CurrPos_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:BottomAxis_CurrentPosition</pv_name>
+      <x>317</x>
+      <y>19</y>
+      <width>110</width>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1LVDT_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:LVDTBottom_PV</pv_name>
+      <x>447</x>
+      <y>19</y>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1TargVel_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:targetVelocityBottomAxis</pv_name>
+      <x>567</x>
+      <y>19</y>
+      <width>110</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <maximum>0.5</maximum>
+      <limits_from_pv>false</limits_from_pv>
+      <increment>0.1</increment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1TargPos_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:targetPositionBottomAxis</pv_name>
+      <x>697</x>
+      <y>19</y>
+      <width>110</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <minimum>-200.0</minimum>
+      <maximum>200.0</maximum>
+      <limits_from_pv>false</limits_from_pv>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Move_7</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:btn_Move_BottomAxis</pv_name>
+      <x>827</x>
+      <y>9</y>
+      <width>90</width>
+      <height>40</height>
+      <off_label>Move</off_label>
+      <off_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>Move</on_label>
+      <on_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Stop_5</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:btn_Stop_BottomAxis</pv_name>
+      <x>927</x>
+      <y>9</y>
+      <width>90</width>
+      <height>40</height>
+      <off_label>Stop</off_label>
+      <off_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>Stop</on_label>
+      <on_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_8</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:BottomAxis_powerStatus</pv_name>
+      <x>1040</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label>PowerStatus</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>PowerStatus</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1FwdLimit_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:foreward_limit_BottomAxis</pv_name>
+      <x>1040</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label> FWD LIM</off_label>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>FWD LIM</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1BwdLimit_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:backward_limit_BottomAxis</pv_name>
+      <x>1133</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label> BWD LIM</off_label>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>BWD LIM</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1MinPos_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:BottomAxis_minPosition</pv_name>
+      <x>1330</x>
+      <y>19</y>
+      <width>120</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1MaxPos_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:BottomAxis_maxPosition</pv_name>
+      <x>1460</x>
+      <y>19</y>
+      <width>120</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_9</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:BottomAxis_moving</pv_name>
+      <x>1133</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label>NOTMOVING</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>MOVING</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Stop_6</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:btn_EStop_BottomAxis</pv_name>
+      <x>1600</x>
+      <width>80</width>
+      <height>50</height>
+      <off_label>ESTOP</off_label>
+      <off_color>
+        <color red="220" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>ESTOP</on_label>
+      <on_color>
+        <color red="220" green="0" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Error_2</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:BottomAxis_error</pv_name>
+      <x>1226</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label> ERROR</off_label>
+      <off_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>ERROR</on_label>
+      <on_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_10</name>
+      <pv_name>PWFA:BL1:COL:BL1COLV01:BottomAxis_ESTOP_status</pv_name>
+      <x>1226</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label>EStopStatus</off_label>
+      <off_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>EStopStatus</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_3</name>
+    <x>140</x>
+    <y>240</y>
+    <width>1680</width>
+    <height>51</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>Left</text>
+      <y>17</y>
+      <width>37</width>
+      <height>22</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="20.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Move_8</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:btn_Power_LeftAxis</pv_name>
+      <x>77</x>
+      <y>14</y>
+      <width>90</width>
+      <off_label>Power</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>Power</on_label>
+      <on_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1CurrVel_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LeftAxis_CurrentVelocity</pv_name>
+      <x>192</x>
+      <y>19</y>
+      <width>110</width>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1CurrPos_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LeftAxis_CurrentPosition</pv_name>
+      <x>317</x>
+      <y>19</y>
+      <width>110</width>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1LVDT_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LVDTLeft_PV</pv_name>
+      <x>447</x>
+      <y>19</y>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1TargVel_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:targetVelocityLeftAxis</pv_name>
+      <x>567</x>
+      <y>19</y>
+      <width>110</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <maximum>0.5</maximum>
+      <limits_from_pv>false</limits_from_pv>
+      <increment>0.1</increment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1TargPos_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:targetPositionLeftAxis</pv_name>
+      <x>697</x>
+      <y>19</y>
+      <width>110</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <minimum>-200.0</minimum>
+      <maximum>200.0</maximum>
+      <limits_from_pv>false</limits_from_pv>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Move_9</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:btn_Move_LeftAxis</pv_name>
+      <x>827</x>
+      <y>9</y>
+      <width>90</width>
+      <height>40</height>
+      <off_label>Move</off_label>
+      <off_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>Move</on_label>
+      <on_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Stop_7</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:btn_Stop_LeftAxis</pv_name>
+      <x>927</x>
+      <y>9</y>
+      <width>90</width>
+      <height>40</height>
+      <off_label>Stop</off_label>
+      <off_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>Stop</on_label>
+      <on_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_11</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LeftAxis_powerStatus</pv_name>
+      <x>1040</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label>PowerStatus</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>PowerStatus</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1FwdLimit_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:foreward_limit_LeftAxis</pv_name>
+      <x>1040</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label> FWD LIM</off_label>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>FWD LIM</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1BwdLimit_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:backward_limit_LeftAxis</pv_name>
+      <x>1133</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label> BWD LIM</off_label>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>BWD LIM</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1MinPos_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LeftAxis_minPosition</pv_name>
+      <x>1330</x>
+      <y>19</y>
+      <width>120</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1MaxPos_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LeftAxis_maxPosition</pv_name>
+      <x>1460</x>
+      <y>19</y>
+      <width>120</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_12</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LeftAxis_moving</pv_name>
+      <x>1133</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label>NOTMOVING</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>MOVING</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Stop_8</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:btn_EStop_LeftAxis</pv_name>
+      <x>1600</x>
+      <width>80</width>
+      <height>50</height>
+      <off_label>ESTOP</off_label>
+      <off_color>
+        <color red="220" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>ESTOP</on_label>
+      <on_color>
+        <color red="220" green="0" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Error_3</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LeftAxis_error</pv_name>
+      <x>1226</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label> ERROR</off_label>
+      <off_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>ERROR</on_label>
+      <on_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_13</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LeftAxis_ESTOP_status</pv_name>
+      <x>1226</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label>EStopStatus</off_label>
+      <off_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>EStopStatus</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_4</name>
+    <x>140</x>
+    <y>300</y>
+    <width>1680</width>
+    <height>51</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_4</name>
+      <text>Right</text>
+      <y>17</y>
+      <width>52</width>
+      <height>22</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="20.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+        </color>
+      </background_color>
+      <transparent>false</transparent>
+      <auto_size>true</auto_size>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Move_10</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:btn_Power_RightAxis</pv_name>
+      <x>77</x>
+      <y>14</y>
+      <width>90</width>
+      <off_label>Power</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>Power</on_label>
+      <on_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1CurrVel_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:RightAxis_CurrentVelocity</pv_name>
+      <x>192</x>
+      <y>19</y>
+      <width>110</width>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1CurrPos_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:RightAxis_CurrentPosition</pv_name>
+      <x>317</x>
+      <y>19</y>
+      <width>110</width>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>TextA1LVDT_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:LVDTRight_PV</pv_name>
+      <x>447</x>
+      <y>19</y>
+      <height>22</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1TargVel_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:targetVelocityRightAxis</pv_name>
+      <x>567</x>
+      <y>19</y>
+      <width>110</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <maximum>0.5</maximum>
+      <limits_from_pv>false</limits_from_pv>
+      <increment>0.1</increment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1TargPos_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:targetPositionRightAxis</pv_name>
+      <x>697</x>
+      <y>19</y>
+      <width>110</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <minimum>-200.0</minimum>
+      <maximum>200.0</maximum>
+      <limits_from_pv>false</limits_from_pv>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Move_11</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:btn_Move_RightAxis</pv_name>
+      <x>827</x>
+      <y>9</y>
+      <width>90</width>
+      <height>40</height>
+      <off_label>Move</off_label>
+      <off_color>
+        <color name="OK" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>Move</on_label>
+      <on_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Stop_9</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:btn_Stop_RightAxis</pv_name>
+      <x>927</x>
+      <y>9</y>
+      <width>90</width>
+      <height>40</height>
+      <off_label>Stop</off_label>
+      <off_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>Stop</on_label>
+      <on_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_14</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:RightAxis_powerStatus</pv_name>
+      <x>1040</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label>PowerStatus</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>PowerStatus</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1FwdLimit_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:foreward_limit_RightAxis</pv_name>
+      <x>1040</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label> FWD LIM</off_label>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>FWD LIM</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1BwdLimit_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:backward_limit_RightAxis</pv_name>
+      <x>1133</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label> BWD LIM</off_label>
+      <off_color>
+        <color name="MAJOR" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>BWD LIM</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1MinPos_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:RightAxis_minPosition</pv_name>
+      <x>1330</x>
+      <y>19</y>
+      <width>120</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>SpinA1MaxPos_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:RightAxis_maxPosition</pv_name>
+      <x>1460</x>
+      <y>19</y>
+      <width>120</width>
+      <height>24</height>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_15</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:RightAxis_moving</pv_name>
+      <x>1133</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label>NOTMOVING</off_label>
+      <off_color>
+        <color name="Grid" red="128" green="128" blue="128">
+        </color>
+      </off_color>
+      <on_label>MOVING</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>BtnA1Stop_10</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:btn_EStop_RightAxis</pv_name>
+      <x>1600</x>
+      <width>80</width>
+      <height>50</height>
+      <off_label>ESTOP</off_label>
+      <off_color>
+        <color red="220" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>ESTOP</on_label>
+      <on_color>
+        <color red="220" green="0" blue="0">
+        </color>
+      </on_color>
+      <show_led>false</show_led>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <mode>1</mode>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Error_4</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:RightAxis_error</pv_name>
+      <x>1226</x>
+      <width>93</width>
+      <height>24</height>
+      <off_label> ERROR</off_label>
+      <off_color>
+        <color name="On" red="0" green="255" blue="0">
+        </color>
+      </off_color>
+      <on_label>ERROR</on_label>
+      <on_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </on_color>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LedA1Moving_16</name>
+      <pv_name>PWFA:BL1:COL:BL1COLH01:RightAxis_ESTOP_status</pv_name>
+      <x>1226</x>
+      <y>27</y>
+      <width>93</width>
+      <height>24</height>
+      <off_label>EStopStatus</off_label>
+      <off_color>
+        <color name="STOP" red="255" green="0" blue="0">
+        </color>
+      </off_color>
+      <on_label>EStopStatus</on_label>
+      <line_color>
+        <color red="210" green="210" blue="210">
+        </color>
+      </line_color>
+      <square>true</square>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>BtnRestartTC</name>
+    <actions>
+      <action type="open_file">
+        <file>restart_all.bat</file>
+        <description>Open File</description>
+      </action>
+    </actions>
+    <text>RestartTC</text>
+    <x>20</x>
+    <y>730</y>
+    <width>120</width>
+    <height>50</height>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

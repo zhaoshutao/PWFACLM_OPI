@@ -17,7 +17,7 @@ echo   [OK] IOC stopped
 REM --- 2. Trigger restartTC ---
 echo.
 echo [2/4] Triggering restartTC via Modbus...
-"C:\Program Files\Python311\python.exe" -c "from pymodbus.client import ModbusTcpClient; c=ModbusTcpClient('192.168.201.137',port=502,timeout=3); c.connect(); remote=c.read_coils(0,count=1); estop_bak=c.read_coils(1,count=1); print('Remote mode:', remote.bits[0], ' E_STOP:', estop_bak.bits[0]); c.write_coil(2,True); c.close(); print('restartTC coil written')"
+"C:\Program Files\Python311\python.exe" -c "from pymodbus.client import ModbusTcpClient; c=ModbusTcpClient('192.168.245.52',port=502,timeout=3); c.connect(); r=c.read_holding_registers(address=12288,count=1); print('MW0:', r.registers[0] if not r.isError() else 'ERR'); c.write_register(address=12288,value=0x0004); c.close(); print('restartTC written (MW0 bit2)')"
 if %errorlevel% neq 0 (
     echo   [FAIL] Write failed! Check network and pymodbus
     pause
@@ -26,13 +26,13 @@ if %errorlevel% neq 0 (
 echo   [OK] restartTC sent, PLC rebooting...
 
 REM --- 3. Wait for PLC ---
-echo.
+echo.a
 echo [3/4] Waiting for PLC (max 90s)...
 set tick=0
 :wait_loop
 ping -n 4 127.0.0.1 >nul
 set /a tick+=3
-"C:\Program Files\Python311\python.exe" -c "from pymodbus.client import ModbusTcpClient; c=ModbusTcpClient('192.168.201.137',port=502,timeout=2); r=c.connect(); r2=c.read_coils(0,count=1) if r else None; c.close(); exit(0 if r and r2 and not r2.isError() else 1)" >nul 2>&1
+"C:\Program Files\Python311\python.exe" -c "from pymodbus.client import ModbusTcpClient; c=ModbusTcpClient('192.168.245.52',port=502,timeout=2); r=c.connect(); r2=c.read_holding_registers(address=12288,count=1) if r else None; c.close(); exit(0 if r and r2 and not r2.isError() else 1)" >nul 2>&1
 if %errorlevel% equ 0 (
     echo   [OK] PLC ready (!tick!s elapsed)
     goto :plc_ready
